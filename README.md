@@ -17,8 +17,7 @@ A simple REST API using Flask to manage user data in-memory. Built for a Python 
 ## 🛠 Installation
 
 ```bash
-git clone https://github.com/codezxz/flask-user-api.git
-cd flask-user-api
+git clone https://github.com/codezxz/.git
 pip install -r requirements.txt
 python app.py
 ```
@@ -33,11 +32,18 @@ python app.py
 | PUT    | /users/<id>    | Update a user       |
 | DELETE | /users/<id>    | Delete a user       |
 
-## ☁️ Deployment on Render
 
-- Connected to GitHub repo: `codezxz/flask-user-api`
-- Uses `render.yaml` for configuration
-- Auto-deployed at: `https://flask-user-api.onrender.com` (after Render setup)
+## User Management API Endpoints
+
+Method	Endpoint	Description	Parameters	Request Body Required
+
+GET	/users	Retrieve all users	None	❌ No
+GET	/users/<user_id>	Retrieve a user by ID	user_id (int)	❌ No
+POST	/users	Create a new user	None	✅ Yes (name, email)
+PUT	/users/<user_id>	Update an existing user	user_id (int)	✅ Yes (partial or full)
+DELETE	/users/<user_id>	Delete a user by ID	user_id (int)	❌ No
+
+## API Endpoints: http://localhost:5000/apidocs
 
 ## 👨‍💻 Author
 
