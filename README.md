@@ -33,16 +33,6 @@ python app.py
 | DELETE | /users/<id>    | Delete a user       |
 
 
-## User Management API Endpoints
-
-Method	Endpoint	Description	Parameters	Request Body Required
-
-GET	/users	Retrieve all users	None	❌ No
-GET	/users/<user_id>	Retrieve a user by ID	user_id (int)	❌ No
-POST	/users	Create a new user	None	✅ Yes (name, email)
-PUT	/users/<user_id>	Update an existing user	user_id (int)	✅ Yes (partial or full)
-DELETE	/users/<user_id>	Delete a user by ID	user_id (int)	❌ No
-
 ## API Endpoints: http://localhost:5000/apidocs
 
 ## 👨‍💻 Author
